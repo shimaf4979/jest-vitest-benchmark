@@ -33,7 +33,8 @@ describe("Async Operations Tests - Vitest", () => {
   });
 
   describe("Async/Await Tests", () => {
-    const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+    const delay = (ms: number) =>
+      new Promise((resolve) => setTimeout(resolve, ms));
 
     test("should wait for timeout", async () => {
       const start = Date.now();
@@ -98,7 +99,10 @@ describe("Async Operations Tests - Vitest", () => {
       return "Success";
     };
 
-    const retryOperation = async (fn: () => Promise<string>, maxRetries: number) => {
+    const retryOperation = async (
+      fn: () => Promise<string>,
+      maxRetries: number,
+    ) => {
       let lastError;
       for (let i = 0; i < maxRetries; i++) {
         try {
@@ -143,7 +147,7 @@ describe("Async Operations Tests - Vitest", () => {
           batch.map(async (item) => {
             await new Promise((resolve) => setTimeout(resolve, 10));
             return item * 2;
-          })
+          }),
         );
         results.push(...batchResults);
       }

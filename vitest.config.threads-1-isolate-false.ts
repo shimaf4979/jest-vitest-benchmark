@@ -6,7 +6,13 @@ export default defineConfig({
     environment: "jsdom",
     include: ["src/vitest/**/*.test.ts", "src/vitest/**/*.test.tsx"],
     setupFiles: ["./vitest.setup.ts"],
-    // Disable isolation - can cause issues with shared state
     isolate: false,
+    pool: "threads",
+    poolOptions: {
+      threads: {
+        maxThreads: 1,
+        minThreads: 1,
+      },
+    },
   },
 });

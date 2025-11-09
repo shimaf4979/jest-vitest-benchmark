@@ -6,12 +6,8 @@ export default defineConfig({
     environment: "jsdom",
     include: ["src/vitest/**/*.test.ts", "src/vitest/**/*.test.tsx"],
     setupFiles: ["./vitest.setup.ts"],
-    pool: "forks",
-    poolOptions: {
-      forks: {
-        maxForks: 4,
-        minForks: 4,
-      },
-    },
+    isolate: true,
+    pool: "vmThreads",
+    // Use default vmThreads count (usually CPU cores)
   },
 });

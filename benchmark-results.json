@@ -1,80 +1,176 @@
 [
   {
     "name": "Jest (default)",
-    "duration": 7148,
+    "duration": 9998,
     "detailedDuration": null,
     "status": "success"
   },
   {
     "name": "Jest (1 worker)",
-    "duration": 5381,
+    "duration": 12872,
     "detailedDuration": null,
     "status": "success"
   },
   {
     "name": "Jest (2 workers)",
-    "duration": 4230,
+    "duration": 8256,
     "detailedDuration": null,
     "status": "success"
   },
   {
     "name": "Jest (4 workers)",
-    "duration": 4421,
+    "duration": 8394,
     "detailedDuration": null,
     "status": "success"
   },
   {
-    "name": "Vitest (default)",
-    "duration": 3675,
-    "detailedDuration": "\u001b[22m 3.24s\u001b[2m (transform 561ms, setup 1.83s, collect 937ms, tests 812ms, environment 14.07s, prepare 247ms)\u001b[22m",
+    "name": "Vitest Threads-1 isolate=true",
+    "duration": 14734,
+    "detailedDuration": "\u001b[22m 14.26s\u001b[2m (transform 1.11s, setup 9.48s, collect 2.96s, tests 2.62s, environment 67.09s, prepare 1.18s)\u001b[22m",
     "status": "success"
   },
   {
-    "name": "Vitest (no-isolate)",
-    "duration": 1537,
-    "detailedDuration": "\u001b[22m 1.16s\u001b[2m (transform 568ms, setup 609ms, collect 821ms, tests 523ms, environment 16.21s, prepare 53ms)\u001b[22m",
+    "name": "Vitest Threads-2 isolate=true",
+    "duration": 19354,
+    "detailedDuration": "\u001b[22m 18.70s\u001b[2m (transform 1.38s, setup 13.20s, collect 3.53s, tests 3.25s, environment 88.70s, prepare 1.55s)\u001b[22m",
     "status": "success"
   },
   {
-    "name": "Vitest (slow mode)",
-    "duration": 1353,
-    "detailedDuration": "\u001b[22m 958ms\u001b[2m (transform 475ms, setup 458ms, collect 664ms, tests 508ms, environment 12.50s, prepare 43ms)\u001b[22m",
+    "name": "Vitest Threads-4 isolate=true",
+    "duration": 17664,
+    "detailedDuration": "\u001b[22m 16.98s\u001b[2m (transform 1.29s, setup 11.78s, collect 3.23s, tests 3.17s, environment 79.46s, prepare 1.36s)\u001b[22m",
     "status": "success"
   },
   {
-    "name": "Vitest (isolate only)",
-    "duration": 3533,
-    "detailedDuration": "\u001b[22m 3.13s\u001b[2m (transform 552ms, setup 1.84s, collect 838ms, tests 788ms, environment 13.68s, prepare 229ms)\u001b[22m",
+    "name": "Vitest Threads-default isolate=true",
+    "duration": 16427,
+    "detailedDuration": "\u001b[22m 15.80s\u001b[2m (transform 1.20s, setup 10.86s, collect 2.99s, tests 2.79s, environment 74.10s, prepare 1.29s)\u001b[22m",
     "status": "success"
   },
   {
-    "name": "Vitest (isolate single)",
-    "duration": 3133,
-    "detailedDuration": "\u001b[22m 2.72s\u001b[2m (transform 390ms, setup 1.60s, collect 914ms, tests 765ms, environment 11.60s, prepare 268ms)\u001b[22m",
+    "name": "Vitest Threads-1 isolate=false",
+    "duration": 2201,
+    "detailedDuration": "\u001b[22m 1.63s\u001b[2m (transform 1.37s, setup 1.04s, collect 2.26s, tests 1.21s, environment 63.63s, prepare 105ms)\u001b[22m",
     "status": "success"
   },
   {
-    "name": "Vitest (1 thread)",
-    "duration": 3138,
-    "detailedDuration": "\u001b[22m 2.73s\u001b[2m (transform 381ms, setup 1.68s, collect 865ms, tests 752ms, environment 11.68s, prepare 209ms)\u001b[22m",
+    "name": "Vitest Threads-2 isolate=false",
+    "duration": 2085,
+    "detailedDuration": "\u001b[22m 1.59s\u001b[2m (transform 1.38s, setup 1.03s, collect 2.33s, tests 1.17s, environment 60.57s, prepare 79ms)\u001b[22m",
     "status": "success"
   },
   {
-    "name": "Vitest (2 threads)",
-    "duration": 3071,
-    "detailedDuration": "\u001b[22m 2.67s\u001b[2m (transform 365ms, setup 1.54s, collect 851ms, tests 811ms, environment 11.47s, prepare 216ms)\u001b[22m",
+    "name": "Vitest Threads-4 isolate=false",
+    "duration": 2150,
+    "detailedDuration": "\u001b[22m 1.68s\u001b[2m (transform 1.30s, setup 1.10s, collect 2.36s, tests 1.23s, environment 66.21s, prepare 106ms)\u001b[22m",
     "status": "success"
   },
   {
-    "name": "Vitest (4 threads)",
-    "duration": 3107,
-    "detailedDuration": "\u001b[22m 2.71s\u001b[2m (transform 395ms, setup 1.65s, collect 787ms, tests 870ms, environment 11.45s, prepare 232ms)\u001b[22m",
+    "name": "Vitest Threads-default isolate=false",
+    "duration": 2094,
+    "detailedDuration": "\u001b[22m 1.60s\u001b[2m (transform 1.35s, setup 943ms, collect 2.31s, tests 1.12s, environment 62.29s, prepare 78ms)\u001b[22m",
     "status": "success"
   },
   {
-    "name": "Vitest (forks)",
-    "duration": 3611,
-    "detailedDuration": "\u001b[22m 3.22s\u001b[2m (transform 562ms, setup 1.78s, collect 1.00s, tests 821ms, environment 13.95s, prepare 242ms)\u001b[22m",
+    "name": "Vitest Forks-1 isolate=true",
+    "duration": 19000,
+    "detailedDuration": "\u001b[22m 18.51s\u001b[2m (transform 1.80s, setup 11.96s, collect 3.70s, tests 2.60s, environment 88.04s, prepare 1.52s)\u001b[22m",
+    "status": "success"
+  },
+  {
+    "name": "Vitest Forks-2 isolate=true",
+    "duration": 18777,
+    "detailedDuration": "\u001b[22m 18.26s\u001b[2m (transform 2.26s, setup 10.90s, collect 4.56s, tests 2.93s, environment 86.27s, prepare 1.51s)\u001b[22m",
+    "status": "success"
+  },
+  {
+    "name": "Vitest Forks-4 isolate=true",
+    "duration": 18489,
+    "detailedDuration": "\u001b[22m 18.02s\u001b[2m (transform 1.73s, setup 11.68s, collect 3.45s, tests 2.77s, environment 85.67s, prepare 1.64s)\u001b[22m",
+    "status": "success"
+  },
+  {
+    "name": "Vitest Forks-default isolate=true",
+    "duration": 17663,
+    "detailedDuration": "\u001b[22m 17.17s\u001b[2m (transform 1.71s, setup 10.84s, collect 3.61s, tests 2.43s, environment 82.01s, prepare 1.38s)\u001b[22m",
+    "status": "success"
+  },
+  {
+    "name": "Vitest Forks-1 isolate=false",
+    "duration": 2339,
+    "detailedDuration": "\u001b[22m 1.89s\u001b[2m (transform 1.97s, setup 1.25s, collect 2.84s, tests 1.08s, environment 77.83s, prepare 87ms)\u001b[22m",
+    "status": "success"
+  },
+  {
+    "name": "Vitest Forks-2 isolate=false",
+    "duration": 2538,
+    "detailedDuration": "\u001b[22m 2.08s\u001b[2m (transform 1.99s, setup 1.23s, collect 2.93s, tests 1.11s, environment 91.89s, prepare 110ms)\u001b[22m",
+    "status": "success"
+  },
+  {
+    "name": "Vitest Forks-4 isolate=false",
+    "duration": 2272,
+    "detailedDuration": "\u001b[22m 1.82s\u001b[2m (transform 1.94s, setup 1.15s, collect 2.75s, tests 1.11s, environment 74.40s, prepare 79ms)\u001b[22m",
+    "status": "success"
+  },
+  {
+    "name": "Vitest Forks-default isolate=false",
+    "duration": 2346,
+    "detailedDuration": "\u001b[22m 1.89s\u001b[2m (transform 1.97s, setup 1.29s, collect 2.82s, tests 1.03s, environment 78.13s, prepare 102ms)\u001b[22m",
+    "status": "success"
+  },
+  {
+    "name": "Vitest vmThreads-1 isolate=true",
+    "duration": 3323,
+    "detailedDuration": "\u001b[22m 2.86s\u001b[2m (transform 1.20s, setup 4.71s, collect 2.55s, tests 2.15s, environment 4.31s, prepare 8.52s)\u001b[22m",
+    "status": "success"
+  },
+  {
+    "name": "Vitest vmThreads-2 isolate=true",
+    "duration": 3761,
+    "detailedDuration": "\u001b[22m 3.18s\u001b[2m (transform 1.34s, setup 5.12s, collect 2.84s, tests 2.27s, environment 4.90s, prepare 9.49s)\u001b[22m",
+    "status": "success"
+  },
+  {
+    "name": "Vitest vmThreads-4 isolate=true",
+    "duration": 3522,
+    "detailedDuration": "\u001b[22m 3.05s\u001b[2m (transform 1.27s, setup 5.01s, collect 2.82s, tests 2.33s, environment 4.46s, prepare 8.91s)\u001b[22m",
+    "status": "success"
+  },
+  {
+    "name": "Vitest vmThreads-default isolate=true",
+    "duration": 3398,
+    "detailedDuration": "\u001b[22m 2.92s\u001b[2m (transform 1.25s, setup 4.49s, collect 2.85s, tests 2.20s, environment 4.33s, prepare 8.79s)\u001b[22m",
+    "status": "success"
+  },
+  {
+    "name": "Vitest vmThreads-1 isolate=false",
+    "duration": 3602,
+    "detailedDuration": "\u001b[22m 3.08s\u001b[2m (transform 1.34s, setup 4.99s, collect 3.04s, tests 2.07s, environment 4.81s, prepare 9.32s)\u001b[22m",
+    "status": "success"
+  },
+  {
+    "name": "Vitest vmThreads-2 isolate=false",
+    "duration": 3507,
+    "detailedDuration": "\u001b[22m 3.04s\u001b[2m (transform 1.57s, setup 5.00s, collect 3.03s, tests 2.18s, environment 4.54s, prepare 8.93s)\u001b[22m",
+    "status": "success"
+  },
+  {
+    "name": "Vitest vmThreads-4 isolate=false",
+    "duration": 3390,
+    "detailedDuration": "\u001b[22m 2.93s\u001b[2m (transform 1.32s, setup 4.68s, collect 2.93s, tests 2.17s, environment 4.41s, prepare 8.59s)\u001b[22m",
+    "status": "success"
+  },
+  {
+    "name": "Vitest vmThreads-default isolate=false",
+    "duration": 3496,
+    "detailedDuration": "\u001b[22m 3.02s\u001b[2m (transform 1.20s, setup 4.68s, collect 2.78s, tests 2.17s, environment 4.61s, prepare 9.15s)\u001b[22m",
+    "status": "success"
+  },
+  {
+    "name": "Vitest (default config)",
+    "duration": 17272,
+    "detailedDuration": "\u001b[22m 16.77s\u001b[2m (transform 1.45s, setup 9.94s, collect 3.22s, tests 2.40s, environment 80.29s, prepare 1.40s)\u001b[22m",
     "status": "success"
   }
 ]

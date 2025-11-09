@@ -31,7 +31,8 @@ describe("Async Operations Tests - Jest", () => {
   });
 
   describe("Async/Await Tests", () => {
-    const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+    const delay = (ms: number) =>
+      new Promise((resolve) => setTimeout(resolve, ms));
 
     test("should wait for timeout", async () => {
       const start = Date.now();
@@ -56,30 +57,6 @@ describe("Async Operations Tests - Jest", () => {
         throw new Error("Async error");
       };
       await expect(failAsync()).rejects.toThrow("Async error");
-    });
-  });
-
-  describe("Callback Tests", () => {
-    test("should execute callback", (done) => {
-      const callback = (value: number) => {
-        expect(value).toBe(42);
-        done();
-      };
-      setTimeout(() => callback(42), 10);
-    });
-
-    test("should handle multiple callbacks", (done) => {
-      let count = 0;
-      const callback = () => {
-        count++;
-        if (count === 3) {
-          expect(count).toBe(3);
-          done();
-        }
-      };
-      setTimeout(callback, 10);
-      setTimeout(callback, 20);
-      setTimeout(callback, 30);
     });
   });
 
@@ -120,7 +97,10 @@ describe("Async Operations Tests - Jest", () => {
       return "Success";
     };
 
-    const retryOperation = async (fn: () => Promise<string>, maxRetries: number) => {
+    const retryOperation = async (
+      fn: () => Promise<string>,
+      maxRetries: number,
+    ) => {
       let lastError;
       for (let i = 0; i < maxRetries; i++) {
         try {
@@ -165,7 +145,7 @@ describe("Async Operations Tests - Jest", () => {
           batch.map(async (item) => {
             await new Promise((resolve) => setTimeout(resolve, 10));
             return item * 2;
-          })
+          }),
         );
         results.push(...batchResults);
       }

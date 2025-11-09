@@ -7,7 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "test:jest": "jest",
     "test:vitest": "vitest run",
-    "benchmark": "node benchmark.js"
+    "test:fastest": "vitest run --config vitest.config.fastest.ts",
+    "benchmark": "node benchmark.js",
+    "benchmark:multi": "node benchmark-multi-scale.js",
+    "benchmark:vitest": "node benchmark-vitest-only.js",
+    "benchmark:chart": "node generate-chart.cjs",
+    "analyze:metrics": "node analyze-metrics.js",
+    "trace:metrics": "./trace-metrics.sh"
   },
   "keywords": [],
   "author": "",

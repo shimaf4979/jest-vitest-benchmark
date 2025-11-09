@@ -3,24 +3,6 @@ const fs = require("fs");
 const path = require("path");
 
 const configs = [
-  // Jest configurations
-  {
-    name: "Jest (default)",
-    cmd: "npx jest --clearCache && npx jest --no-cache",
-  },
-  {
-    name: "Jest (1 worker)",
-    cmd: "npx jest --clearCache && npx jest --config jest.config.maxWorkers-1.js --no-cache",
-  },
-  {
-    name: "Jest (2 workers)",
-    cmd: "npx jest --clearCache && npx jest --config jest.config.maxWorkers-2.js --no-cache",
-  },
-  {
-    name: "Jest (4 workers)",
-    cmd: "npx jest --clearCache && npx jest --config jest.config.maxWorkers-4.js --no-cache",
-  },
-
   // Vitest Threads - isolate: true
   {
     name: "Vitest Threads-1 isolate=true",
@@ -155,7 +137,7 @@ function clearCaches() {
 }
 
 console.log("=".repeat(80));
-console.log("BENCHMARK: Jest vs Vitest Performance Comparison");
+console.log("BENCHMARK: Vitest Only Performance Comparison");
 console.log("=".repeat(80));
 console.log(`Total configurations: ${configs.length}`);
 console.log("=".repeat(80));
@@ -232,7 +214,7 @@ sortedResults.forEach((result, index) => {
 });
 
 // Save results to JSON
-const outputPath = "./benchmark-results.json";
+const outputPath = "./benchmark-vitest-results.json";
 fs.writeFileSync(outputPath, JSON.stringify(results, null, 2));
 
 console.log("\n" + "=".repeat(80));

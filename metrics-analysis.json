@@ -1,0 +1,38 @@
+[
+  {
+    "name": "isolate: false (fastest)",
+    "description": "環境を共有、最速",
+    "metrics": {
+      "transform": "921ms",
+      "setup": "898ms",
+      "collect": "1.43s",
+      "tests": "790ms",
+      "environment": "48.74s",
+      "prepare": "56ms"
+    }
+  },
+  {
+    "name": "isolate: true (single thread)",
+    "description": "環境を分離、シングルスレッド",
+    "metrics": {
+      "transform": "1.03s",
+      "setup": "5.68s",
+      "collect": "2.19s",
+      "tests": "1.62s",
+      "environment": "39.92s",
+      "prepare": "812ms"
+    }
+  },
+  {
+    "name": "isolate: true (4 threads)",
+    "description": "環境を分離、4並列",
+    "metrics": {
+      "transform": "860ms",
+      "setup": "6.04s",
+      "collect": "2.05s",
+      "tests": "1.81s",
+      "environment": "40.41s",
+      "prepare": "862ms"
+    }
+  }
+]

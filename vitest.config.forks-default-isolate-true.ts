@@ -6,13 +6,8 @@ export default defineConfig({
     environment: "jsdom",
     include: ["src/vitest/**/*.test.ts", "src/vitest/**/*.test.tsx"],
     setupFiles: ["./vitest.setup.ts"],
-    // Enable isolation with single thread
     isolate: true,
-    pool: "threads",
-    poolOptions: {
-      threads: {
-        singleThread: true,
-      },
-    },
+    pool: "forks",
+    // Use default fork count (usually CPU cores)
   },
 });

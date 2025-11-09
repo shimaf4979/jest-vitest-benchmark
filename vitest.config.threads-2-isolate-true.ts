@@ -6,7 +6,13 @@ export default defineConfig({
     environment: "jsdom",
     include: ["src/vitest/**/*.test.ts", "src/vitest/**/*.test.tsx"],
     setupFiles: ["./vitest.setup.ts"],
-    // Only set isolate, let Vitest decide pool/threads automatically
     isolate: true,
+    pool: "threads",
+    poolOptions: {
+      threads: {
+        maxThreads: 2,
+        minThreads: 2,
+      },
+    },
   },
 });

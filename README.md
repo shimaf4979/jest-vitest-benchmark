@@ -10,12 +10,25 @@ JestとVitestのパフォーマンスを比較するためのベンチマーク�
 # 依存関係をインストール
 pnpm install
 
-# ベンチマークを実行
+# ベンチマークを実行（現在のファイル数で）
 pnpm run benchmark
+# → 結果: benchmark-results.json
+
+# マルチスケールベンチマーク（10, 50, 100ファイルで実行）
+pnpm run benchmark:multi
+# → 結果: benchmark-results-10files.json
+#        benchmark-results-50files.json
+#        benchmark-results-100files.json
+#        benchmark-results-all.json
+
+# Vitest専用ベンチマーク
+pnpm run benchmark:vitest
+# → 結果: benchmark-vitest-results.json
 
 # 個別にテスト実行
 pnpm run test:jest
 pnpm run test:vitest
+pnpm run test:fastest  # 最速設定（開発用）
 ```
 
 ## 📊 GitHub Actions
