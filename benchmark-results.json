@@ -1,0 +1,57 @@
+[
+  {
+    "name": "Jest (default)",
+    "duration": 5921,
+    "status": "success"
+  },
+  {
+    "name": "Jest (1 worker)",
+    "duration": 3391,
+    "status": "success"
+  },
+  {
+    "name": "Jest (2 workers)",
+    "duration": 2977,
+    "status": "success"
+  },
+  {
+    "name": "Jest (4 workers)",
+    "duration": 3349,
+    "status": "success"
+  },
+  {
+    "name": "Vitest (default)",
+    "duration": 1373,
+    "status": "success"
+  },
+  {
+    "name": "Vitest (no-isolate)",
+    "duration": 1350,
+    "status": "success"
+  },
+  {
+    "name": "Vitest (slow mode)",
+    "duration": 1137,
+    "status": "success"
+  },
+  {
+    "name": "Vitest (1 thread)",
+    "duration": 1191,
+    "status": "success"
+  },
+  {
+    "name": "Vitest (2 threads)",
+    "duration": 1164,
+    "status": "success"
+  },
+  {
+    "name": "Vitest (4 threads)",
+    "duration": 1158,
+    "status": "success"
+  },
+  {
+    "name": "Vitest (forks)",
+    "duration": 1314,
+    "status": "success"
+  }
+]
