@@ -32,6 +32,14 @@ const configs = [
     cmd: "npx vitest run --config vitest.config.slow.ts --no-cache",
   },
   {
+    name: "Vitest (isolate only)",
+    cmd: "npx vitest run --config vitest.config.isolate-only.ts --no-cache",
+  },
+  {
+    name: "Vitest (isolate single)",
+    cmd: "npx vitest run --config vitest.config.isolate-single.ts --no-cache",
+  },
+  {
     name: "Vitest (1 thread)",
     cmd: "npx vitest run --config vitest.config.threads-1.ts --no-cache",
   },
@@ -82,31 +90,49 @@ for (const config of configs) {
   const start = Date.now();
 
   try {
-    execSync(config.cmd, {
+    const output = execSync(config.cmd, {
       stdio: "pipe",
       encoding: "utf-8",
     });
 
     const duration = Date.now() - start;
 
+    // Extract Duration line from output if exists
+    const durationMatch = output.match(/Duration\s+(.+)/);
+    const detailedDuration = durationMatch ? durationMatch[1] : null;
+
     results.push({
       name: config.name,
       duration,
+      detailedDuration,
       status: "success",
     });
 
-    console.log(`✓ Completed in ${duration}ms\n`);
+    console.log(`✓ Completed in ${duration}ms`);
+    if (detailedDuration) {
+      console.log(`  Duration: ${detailedDuration}`);
+    }
+    console.log();
   } catch (error) {
     const duration = Date.now() - start;
+
+    // Try to extract output even on error
+    const output = error.stdout || error.stderr || "";
+    const durationMatch = output.match(/Duration\s+(.+)/);
+    const detailedDuration = durationMatch ? durationMatch[1] : null;
 
     results.push({
       name: config.name,
       duration,
+      detailedDuration,
       status: "failed",
       error: error.message,
     });
 
     console.log(`✗ Failed in ${duration}ms`);
+    if (detailedDuration) {
+      console.log(`  Duration: ${detailedDuration}`);
+    }
     console.log(`Error: ${error.message}\n`);
   }
 }
